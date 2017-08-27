@@ -1,0 +1,1143 @@
+Curriculum:
+
+ 
+
+1 concept - 1 example to grasp the concept - 1 practical example to memorize
+
+ 
+
+1. Revenir sur la notion d'algorithme 
+
+Algorithme: recette de cuisine, plus ou moins compliquée qui s'applique sur des données.
+
+ 
+
+un exemple simple de test est l'algorithme FizzBuzz:
+
+- afficher les nombres de 1 à 100
+
+- si un nombre est un multiple de 3, alors afficher Fizz à sa place,
+
+- si un nombre est un multiple de 5, alors afficher Buzz à sa place,
+
+- si un nombre est un multiple de 3 et 5, alors afficher FizzBuzz à sa place
+
+ 
+
+2. Les données
+
+ 
+
+types de bases:
+
+int => Nombre Entier
+
+float => Nombre Réel
+
+string => chaîne de caractères
+
+ 
+
+manipulation de variables et operations en regardant au travers des fonctions disponibles
+
+ 
+
+exemple 1:
+
+x = "10"
+
+x = x + 20
+
+ 
+
+ð    Erreur d’interprétation
+
+ 
+
+que veut-on faire? La somme de 10 et 20 ou faire une opération (+) sur 2 chaînes de caractères.
+
+Pour l’instant, on essaie de manipuler une chaîne de caractère et un nombre.
+
+ 
+
+1ère solution: on enlève les guillemets car on veut faire la somme des 2 nombres
+
+x = 10
+
+x = x + 20
+
+print(x)
+
+ 
+
+2ème solution : on veut faire la somme et on va transformer la chaine en nombre
+
+x = "10"
+
+x = int(x) + 20
+
+print(x)
+
+ 
+
+3ème solution : on veut concaténer les 2 infos
+
+x = "10"
+
+x = x + "20"
+
+print(x)
+
+ 
+
+4ème solution : on veut concaténer les 2 infos par conversion
+
+x = "10"
+
+x = x + str(20)
+
+print(x)
+
+ 
+
+Pour avoir plus d’informations sur un type et notamment sur les opérations disponibles, on peut utiliser la fonction spéciale dir avec comme argument la variable qu’on veut introspecter :
+
+ 
+
+dir(x)
+
+=> ['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes'] x = - 10
+
+print(x)
+
+-10
+
+__abs__(x)
+
+Traceback (most recent call last):
+
+File "python", line 1, in
+
+NameError: name '__abs__' is not defined
+
+x.__abs__()
+
+=> 10
+
+ 
+
+  x = "ToTo"
+   x.swapcase()
+=> 'tOtO'   
+   
+   x.__contains__("t")
+=> False   x.__contains__("T")
+=> True   
+   
+   x.startwith("T")
+Traceback (most recent call last):
+  File "python", line 1, in 
+AttributeError: 'str' object has no attribute 'startwith'
+   x.startswith("T")
+=> True   x.startswith("t")
+=> False   
+ 
+
+   x = ";"
+   x.join("abc")
+=> 'a;b;c'    
+ 
+
+ 
+
+Exercice :
+
+Faire un appel à la fonction dir() sur une chaine de caractère selon l’envie de chacun et appeler cette fonction
+
+ 
+
+Exercice:
+
+Stocker un prénom dans une variable de type string
+
+Stocker un âge dans une variable numérique
+
+Afficher à l’écran une phrase composée des 2 informations ci-dessus
+
+ 
+
+3. les structures conditionnelles
+
+ 
+
+If/elif/then/and/or
+
+ 
+
+Exemple 2:
+
+x = 100
+
+if x <= 10:
+
+print("tu es trop jeune")
+
+elif x >= 20:
+
+print("tu es trop vieux")
+
+else:
+
+print("tu as le bon âge")
+
+ 
+
+Exercice :
+
+intercaler un message spéciale pour les centenaires dans le code ci-dessus
+
+ 
+
+Solution : (1 des possibles solutions)
+
+x = 100
+
+if x <= 10:
+
+print("tu es trop jeune")
+
+elif x >= 20:
+
+if x != 100:
+
+print("tu es trop vieux")
+
+else:
+
+print("tu es centenaire")
+
+else:
+
+print("tu as le bon âge")
+
+ 
+
+Exercice :
+
+définir une variable qui contient une valeur à tester, sous forme de chaine de caractère ou numérique
+
+définir 2 bornes numériques
+
+si la variable est contenu hors de ces 2 variables, afficher un message d'erreur
+
+indiquant que la valeur est hors des bornes
+
+ 
+
+-                       
+
+-          Point sur and/or pour la combinaison de condition dans un if ou elif
+
+ 
+
+if x >= 10 and x<= 20:
+
+print("tu es au top")
+
+ 
+
+ 
+
+4. les boucles
+
+ 
+
+for/range & while
+
+ 
+
+print("for")
+
+for x in range(0,5):
+
+print(x)
+
+ 
+
+ 
+
+print("while")
+
+j = 0
+
+while j < 5:
+
+print(j)
+
+j = j + 1
+
+ 
+
+https://openclassrooms.com/courses/apprenez-a-programmer-en-python/les-boucles-14
+
+ 
+
+ 
+
+Exercice:
+
+Afficher la table de multiplication que vous souhaitez sur le mode :
+
+5 * 0 = 0
+
+…
+
+5 * 10 = 50
+
+ 
+
+Solution :
+
+parametre = 2
+
+ 
+
+def AfficherTableDeMultiplication(parametre_entree):
+
+print('Table de multiplication de: ', parametre_entree)
+
+for x in range(0,11):
+
+print(parametre_entree, ' x ', x, ' = ', parametre_entree * x)
+
+print()
+
+ 
+
+Exercice :
+
+Algorithme FizzBuzz
+
+- afficher les nombres de 1 à 100
+
+- si un nombre est un multiple de 3, alors afficher Fizz à sa place,
+
+- si un nombre est un multiple de 5, alors afficher Buzz à sa place,
+
+- si un nombre est un multiple de 3 et 5, alors afficher FizzBuzz à sa place
+
+ 
+
+Démonstration du codage de FizzBuzz en utilisant du C#/Visual Studio/Resharper
+
+ 
+
+Exercice:
+
+Programmer le jeu Pierre-Feuille-Ciseaux à jouer contre l’ordinateur
+
+ 
+
+-          Générer une valeur aléatoire en utilisant la fonction random.choice
+
+ 
+
+-          Récupérer un input utilisateur en utilisant la fonction input
+
+ 
+
+-          Valider l’entrée
+
+ 
+
+-          Déterminer le gagnant
+
+ 
+
+Solution :
+
+ 
+
+import random
+
+ 
+
+pierre='PIERRE'
+
+papier='PAPIER'
+
+ciseaux='CISEAUX'
+
+ 
+
+def IsValid(choix):
+
+return choix in [pierre, papier, ciseaux]
+
+ 
+
+def PlayRound(choix_utilisateur, choix_ordinateur, score_joueur, score_ordinateur):
+
+choix_gagnants = [
+
+[pierre, ciseaux],
+
+[papier, pierre],
+
+[ciseaux, papier]
+
+]
+
+ 
+
+if(choix_utilisateur == choix_ordinateur):
+
+print('égalité')
+
+return score_joueur, score_ordinateur
+
+ 
+
+if [choix_utilisateur, choix_ordinateur] in choix_gagnants:
+
+print("L'utilisateur a gagné")
+
+score_joueur = score_joueur + 1
+
+else:
+
+print("L'ordinateur a gagné")
+
+score_ordinateur = score_ordinateur + 1
+
+ 
+
+return score_joueur, score_ordinateur
+
+ 
+
+def NotWinnerYet(score_playerA, score_playerB, score_max):
+
+return (score_playerA < score_max) and (score_playerB < score_max)
+
+ 
+
+def GetComputerchoice():
+
+return random.choice([pierre, papier, ciseaux])
+
+ 
+
+def GetMaxScore():
+
+return int(input('Quel est le score à atteindre pour gagner?:'))
+
+ 
+
+def GetUserchoice():
+
+return input('Faites votre choix:')
+
+ 
+
+ 
+
+ 
+
+score_max = GetMaxScore()
+
+score_joueur = 0
+
+score_ordinateur = 0
+
+ 
+
+while(True == NotWinnerYet(score_joueur, score_ordinateur, score_max)):
+
+choix_ordinateur = GetComputerchoice()
+
+ 
+
+choix_utilisateur = GetUserchoice()
+
+if IsValid(choix_utilisateur.upper()) == False:
+
+print('Choix non valide')
+
+else:
+
+print('Choix valide')
+
+score_joueur, score_ordinateur = PlayRound(choix_utilisateur.upper(), choix_ordinateur, score_joueur, score_ordinateur)
+
+ 
+
+print('le joueur a choisi: ' + choix_utilisateur.upper() + ' et l ordinateur a choisi: ' + choix_ordinateur)
+
+print('Le score actuel devient: joueur='+str(score_joueur) + ' - ' + 'ordinateur='+str(score_ordinateur))
+
+ 
+
+print('Le score final devient: joueur='+str(score_joueur) + ' - ' + 'ordinateur='+str(score_ordinateur))
+
+ 
+
+https://repl.it/Fjhf
+
+ 
+
+Exercice : Guess The Number
+
+ 
+
+-          L’ordinateur choisit un nombre au hasard
+
+-          L’utilisateur propose un nombre
+
+-          Si le nombre n’est pas compris entre 1 et 100, on arrête le jeu (notion de valeur spéciale pour sortir du mode jeu)
+
+-          Sinon on teste le choix du joueur :
+
+1.       S’il y a égalité, le joueuer a gagné et on affiche le nombre de coups pour y arriver
+
+2.       Sinon, le joueur continue à jouer
+
+ 
+
+https://repl.it/GC3B/4
+
+ 
+
+Exercice : Amélioration de l’exercice précédent avec un guidage sur si le guess est supérieur ou inférieur au choix de l’ordinateur
+
+ 
+
+Le but est de jouer avec la version actuelle et de découvrir la mise en place de stratégie de jeu par l’humain, stratégie que l’on va coder ensuite.
+
+ 
+
+Exercice : Amélioration de l’exercice précédent avec un ajout de joueur ordinateur dont la stratégie est laissée à la discrétion du codeur.
+
+ 
+
+Next steps : introduire des listes pour gérer de manière moins nominative les différents joueurs et ensuite, encapsuler les informations d’un joueur dans une instance de classe Joueur
+
+Avec paramétrisation des stratégies.
+
+ 
+
+Indice :
+
+https://repl.it/GMSc/3
+
+ 
+
+Intermède pour montée en compétence sur les listes: Gestion de la modularité d’un programme
+
+ 
+
+-          Exemple simple de gestion de plusieurs listes avec une fonction qui utilisent les différentes listes :
+
+ 
+
+liste_nom = ["toto", "titi"]
+
+liste_age = [0, 10]
+
+ 
+
+def Anniversaire(nom, age):
+
+age = age + 1
+
+print(nom + " a maintenant " + str(age) + " ans")
+
+return age
+
+ 
+
+for annee in range(0, 100):
+
+for i in range(len(liste_nom)):
+
+liste_age[i] = Anniversaire(liste_nom[i], liste_age[i])
+
+print()
+
+ 
+
+ 
+
+Reprise de l’exercice sur le « Guess the number » :
+
+ 
+
+A partir d’un version de base, on ajoute un nouveau joueur (ordinateur)
+
+ 
+
+import random
+
+ordinateur=random.choice(range(1,100))
+
+print("Guess: "+ str(ordinateur))
+
+ 
+
+Nbr_coups_Joueur1 =0
+
+Nbr_coups_Joueur2 =0
+
+ 
+
+win_Joueur1=False
+
+win_Joueur2=False
+
+ 
+
+borne_min = 1
+
+borne_max = 100
+
+ 
+
+def ChoixJoueurAuto(min, max):
+
+print("min: ", min, " - max: ", max)
+
+if(min == max):
+
+return min
+
+return random.choice(range(min,max))
+
+ 
+
+while ((win_Joueur1==False) and (win_Joueur2==False)):
+
+ 
+
+Moi= int((input('Joueur1 propose un nombre:')))
+
+print("Moi: "+ str(Moi))
+
+Lui=ChoixJoueurAuto(borne_min, borne_max)
+
+print("Joueur2: "+ str(Lui))
+
+ 
+
+if ((Moi100)):
+
+print("! STOP !")
+
+break
+
+elif (Moi==ordinateur):
+
+print("! Joueur1 gagné !")
+
+win_Joueur1=True
+
+elif (Moi>ordinateur):
+
+print("Joueur1 c'est -")
+
+else :
+
+print("Joueur1 c'est +")
+
+if (Lui==ordinateur):
+
+print("! Joueur2 gagné !")
+
+win_Joueur2=True
+
+elif (Lui>ordinateur):
+
+print("Joueur2 c'est -")
+
+borne_max = Lui-1
+
+else :
+
+print("Joueur2 c'est +")
+
+borne_min = Lui+1
+
+ 
+
+ 
+
+Nbr_coups_Joueur1 = Nbr_coups_Joueur1 +1
+
+print("Nbr_coups_Joueur1: " + str(Nbr_coups_Joueur1))
+
+Nbr_coups_Joueur2 = Nbr_coups_Joueur2 +1
+
+print("Nbr_coups_Joueur2: " + str(Nbr_coups_Joueur2))
+
+ 
+
+Puis on fait évoluer le code pour ajouter de manière souple plusieurs joueurs :
+
+ 
+
+1. on veut centraliser les informations au même endroit :
+
+-          Nombre de coups,
+
+-          Statut gagnant,
+
+-          borne_min et borne_max
+
+ 
+
+On introduit des listes de ces statuts : une liste pour chaque type d’informations
+
+ 
+
+On va donc doublonner les informations dans un premier temps :
+
+ 
+
+cid:image030.png@01D2A4C1.68FBC6E0
+
+ 
+
+Est doublonné par :
+
+ 
+
+cid:image031.png@01D2A4C1.68FBC6E0
+
+ 
+
+Avec l’équivalence suivante :
+
+ 
+
+cid:image032.png@01D2A4C1.68FBC6E0
+
+ 
+
+L’indice [0] quelque soit la liste correspond à une informations du joueur 1 (l’humain).
+
+L’indice [1] quelque soit la liste correspond à une informations du joueur 2 (l’ordinateur).
+
+ 
+
+Le code correspondant est disponible sous : https://repl.it/Gc0O/1
+
+ 
+
+2. Remplacement des informations nommées par les informations des listes correspondantes
+
+ 
+
+Par exemple, le code :
+
+ 
+
+cid:image033.png@01D2A4C1.68FBC6E0
+
+ 
+
+Devient :
+
+ 
+
+cid:image034.png@01D2A4C1.68FBC6E0
+
+ 
+
+Le code correspondant est disponible sous : https://repl.it/Gc0O/2
+
+ 
+
+3. On découpe le code en regroupant le code de chaque joueur et non plus des blocs de code qui traite une fonction pour les 2 joueurs
+
+ 
+
+Le code :
+
+ 
+
+cid:image035.png@01D2A4C1.68FBC6E0
+
+ 
+
+Devient le code suivant :
+
+ 
+
+cid:image036.png@01D2A4C1.68FBC6E0
+
+ 
+
+Au passage, j’en profite pour changer la ligne :
+
+ 
+
+cid:image037.png@01D2A4C1.68FBC6E0
+
+ 
+
+Par une clause plus générique :
+
+ 
+
+cid:image038.png@01D2A4C1.68FBC6E0
+
+ 
+
+Ce qui nous permet de vérifier qu’aucun des joueurs n’a gagné, et ce qui au passage nous permet de mettre le nombre de joueurs que l’on veut dans la liste.
+
+ 
+
+Le code correspondant est dispo sous : https://repl.it/Gc0O/3
+
+ 
+
+4. On modifie 2 spécialisations pour rendre le code plus adaptable
+
+ 
+
+On part de:
+
+ 
+
+cid:image039.png@01D2A4C1.68FBC6E0
+
+ 
+
+Pour arriver à :
+
+ 
+
+cid:image040.png@01D2A4C1.68FBC6E0
+
+ 
+
+ 
+
+Le code correspondant est dispo sous : https://repl.it/Gc0O/4
+
+ 
+
+5. On pousse la généralisation plus loin en remplaçant tous les textes Joueur1 et Joueur2 par les versions issues de la liste des noms de joueur
+
+ 
+
+Le code est disponible ici : https://repl.it/Gc0O/5
+
+ 
+
+6. On commence à factoriser ce qui ne dépend que de l’indice dans les listes
+
+ 
+
+Le code suivant :
+
+cid:image041.png@01D2A4C1.68FBC6E0
+
+Est quasi le même que :
+
+cid:image042.png@01D2A4C1.68FBC6E0
+
+A la mise à jour des bornes min max près, info non utilisée dans le cas du joueur humain
+
+ 
+
+On crée donc une fonction qui fait la même chose :
+
+cid:image043.png@01D2A4C1.68FBC6E0
+
+ 
+
+La boucle de jeu devient donc :
+
+ 
+
+cid:image044.png@01D2A4C1.68FBC6E0
+
+ 
+
+Le code est dispo sous : https://repl.it/Gc0O/6
+
+ 
+
+On continue avec la partie de mise à jour du nombre de coups :
+
+ 
+
+cid:image045.png@01D2A4C1.68FBC6E0
+
+ 
+
+Le code est dispo sous : https://repl.it/Gc0O/7
+
+ 
+
+Dans la boucle de jeu, les seules parties spécifiques deviennent les stratégies de jeu de l’humain et de l’ordinateur :
+
+ 
+
+7. J’extrait les stratégies de jeu de chacun dans des fonctions et je rend sle code homogène :
+
+ 
+
+cid:image046.png@01D2A4C1.68FBC6E0
+
+ 
+
+En terme d’homogénéisation du code, j’ai ajouter une possibilité de stop pour l’ordinateur (ce qui est inutile pour l’instant) et je passe les bornes min et max à l’humain (ce qui est inutilisé pour l’instant)
+
+ 
+
+Le code est dispo sous : https://repl.it/Gc0O/8
+
+ 
+
+8. ATTENTION : maintenant, on met les fonctions dans un tableau J
+
+ 
+
+cid:image047.png@01D2A4C1.68FBC6E0
+
+ 
+
+ 
+
+Le code est dispo sous : https://repl.it/Gc0O/9
+
+ 
+
+Maintenant, les 2 blocs de code suivants sont équivalents à l’indice près :
+
+ 
+
+cid:image048.png@01D2A4C1.68FBC6E0
+
+ 
+
+cid:image049.png@01D2A4C1.68FBC6E0
+
+ 
+
+On peut donc faire une boucle :
+
+ 
+
+cid:image050.png@01D2A4C1.68FBC6E0
+
+ 
+
+Le code est dispo sous : https://repl.it/Gc0O/11
+
+ 
+
+10. Ajout de nouveaux joueurs
+
+ 
+
+cid:image051.png@01D2A4C1.68FBC6E0
+
+ 
+
+C’est facile mais il ne faut pas oublier de modifier une structure sinon c’est le crash
+
+ 
+
+11 Ajout de nouvelles stratégies
+
+ 
+
+Pour ajouter de nouvelles stratégies, c’est facile : on définit les fonctions et on modifie le tableau du joueur concerné
+
+ 
+
+cid:image052.png@01D2A4C1.68FBC6E0
+
+ 
+
+Le code est dispo sous : https://repl.it/Gc0O/14
+
+ 
+
+On peut même ajouter un joueur ordinateur qui voudrait arrêter le jeu au bout de 3 essais :
+
+ 
+
+cid:image053.png@01D2A4C1.68FBC6E0
+
+ 
+
+Le code est dispo sous : https://repl.it/Gc0O/16
+
+ 
+
+ 
+
+Première approche des classe :
+
+ 
+
+https://openclassrooms.com/courses/apprenez-a-programmer-en-python/premiere-approche-des-classes
+
+ 
+
+ 
+
+Exercice à travailler pendant mes vacances :
+
+ 
+
+-          Faire un programme qui à partir d’une chaine de caractère renvoie des listes de mots de cette phrase qui sont des anagrammes les uns des autres.
+
+-          Exemple:
+
+"un chien nu couche dans sa niche en chine et marche sous le charme"
+
+Donnera les résultats suivants:
+
+
+
+ 
+
+-          Indices :
+
+1.       Splitter une chaîne de caractère suivant une liste de mots :
+
+ 
+
+
+
+ 
+
+2.       Comment reconnaît que 2 mots sont des anagrammes :
+
+ 
+
+
+
+ 
+
+Résultats
+
+ 
+
+
+
+ 
+
+3.       Comment stocker une liste de mots qui correspond à une « clé » donné :
+
+ 
+
+Regardez la notion de map/dictionnaire
+
+ 
+
+ 
+
+Petit tutoriel sur les map :
+
+ 
+
+Une map est un dictionnaire, ou un sommaire : il s’agit d’une structure de données qui à une donnée (la clé) associe une valeur
+
+ 
+
+
+
+ 
+
+ 
+
+La valeur associée à une clé peut aussi être une structure de données plus complexe (ou pas) :
+
+ 
+
+
+
+ 
+
+ 
+
+Mini-projet : Gestion d’une base de données d’employé
+
+Le but de ce mini projet est de construire un programme qui va permettre de gérer une base de données d’employés d’une entreprise.
+
+ 
+
+1.       Affichage d’un menu
+
+ 
+
+Ecrire le code qui permet d’afficher l’écran suivant :
+
+ 
+
+
+
+ 
+
+Suite à une des trois premières actions, le menu doit être à nouveau affiché : on boucle.
+
+On met fin au programme en tapant 0.
+
+Pour l’instant, mis à part, le choix 0, les autres choix ne font rien.
+
+ 
+
+2.       Première version des fonctionnalités
+
+ 
+
+Pour cette étape, il faudra écrire les fonctionnalités des choix 1, 2 et 3 en gérant une liste d’employés (juste leur nom de famille pour commençer) et en la préremplissant avec quelques employés fantomes.
+
+ 
+
+3.       Enrichissement des informations des employés
+
+ 
+
+On fait évoluer le programme pour que les informations concernant un employé contiennent aussi le prénom, un id numérique, une fonction, un service au travers d’une classe.
+
+On n’impacte pas encore les fonctionnalités du menu.
+
+ 
+
+4.       Modification de l’affichage des informations d’un employé
+
+ 
+
+Si lors de l’étape 3, l’affichage des infos d’un employé n’a pas été modifié, l’affichage est un peu brut.
+
+La solution proposée est à chercher du côté de la fonction __str__
+
+ 
+
+5.       Modification de l’ajout d’un nouvel employé
+
+ 
+
+On adapte l’ajout de nouvel employé avec la class
+
+ 
+
+6.       Modification de la recherche d’un nouvel employé
+
+ 
+
+On adapte la recherche d’un nouvel employé
+
+ 
+
+7.       Modification de la recherche d’un nouvel employé
+
+ 
+
+On tente de répondre à la question : que se passe-t-il quand on fait une recherche dans une liste d’employés conséquente
